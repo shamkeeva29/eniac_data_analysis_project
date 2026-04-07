@@ -1,39 +1,5 @@
 # eniac_data_analysis_project: E-Commerce Sales & Discount Analysis
-This project focuses on cleaning, merging, and analyzing a complex retail dataset consisting of three main components: Orders, Orderlines, and Product Catalog. The goal was to uncover how pricing strategies and seasonality drive revenue.
-Key Business Questions Addressed
 
-Product Categorization: How should products be classified to simplify reporting?
+This project involves a comprehensive analysis of e-commerce sales data, focused on cleaning and merging three distinct datasets—orders, orderlines, and products—to uncover the relationship between pricing, discounts, and seasonality. By structuring the data relationally through product SKUs and order IDs, I was able to transform rows of raw data into a "Golden Dataset" ready for business intelligence. The cleaning process was central to the project, requiring me to handle missing values, remove duplicates, and filter out incomplete transactions to ensure financial accuracy. Beyond cleaning, I engineered new metrics such as line-item revenue and precise discount percentages to evaluate how aggressive price cuts actually impact the bottom line.
 
-Price Distribution: What does the pricing landscape look like across different categories?
-
-Discount Impact: How many products are discounted, and how aggressive are those price cuts?
-
-Seasonality & Trends: How do major events like Black Friday and Christmas impact sales volume and margins?
-
-Data Strategy: How can the current data collection process be improved for better future insights?
-
-Data Processing Workflow
-Data Merging: Combined three DataFrames using a relational structure (linking orders, orderlines, and products via sku and order_id).
-
-Data Cleaning: * Handled missing values (NaNs) by cross-referencing unit prices and product lists.
-
-Removed duplicate entries to ensure accurate revenue reporting.
-
-Filtered out incomplete order states (e.g., cancelled or pending) to focus on realized revenue.
-
-Feature Engineering: Created new calculated columns for:
-
-Total Revenue (Quantity × Unit Price)
-
-Discount Percentage (Difference between List Price and Paid Price)
-
-Period Type (Flagging dates for Black Friday and Holiday seasons)
-
-Preliminary Insights
-
-Seasonality: Identified significant revenue spikes during the Q4 holiday window
-
-Discount Strategy: Analyzed the correlation between high-percentage discounts and total units sold to determine if heavy discounting actually increases net profit.
-
-Price Architecture: Visualized how different product types (e.g., accessories vs. hardware) are priced and which categories are most frequently discounted.
-
+The core of the analysis addressed how products should be categorized to simplify reporting and how prices are distributed across those categories to identify market positioning. A significant portion of the study was dedicated to seasonality, specifically quantifying how high-traffic periods like Black Friday and Christmas drive volume compared to regular shopping days. While these special dates clearly boost sales, the data allowed for a deeper look into whether the heavy discounting required for these events might be eroding profit margins. Finally, the project concludes with strategic recommendations for improving future data collection, such as implementing stricter SKU validation and tracking unique customer identifiers, which would move the analysis from simple sales tracking toward predicting long-term customer lifetime value.
